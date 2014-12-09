@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="ThreeViewer" ng-strict-di>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <base href="/v1/" />
+
+        <link rel="stylesheet" href="/v1/src/css/demo.css">
+        <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+
+        <script src="/v1/src/js/config.js"></script>
+        <script>
+            var Viewer = {},
+                ThreeViewer = {};
+        </script>
+
+        <script src="/v1/src/lib/jquery-2.1.1.js"></script>
+        <script src="/v1/src/lib/three.69.js"></script>
+        <script src="/v1/src/lib/OrbitControls.js"></script>
+        <script src="/v1/src/lib/hammer.js"></script>
+        <script src="/v1/src/lib/jquery.hammer.js"></script>
+        <script src="/v1/src/lib/angular.js"></script>
+        <script src="/v1/src/lib/angular-route.js"></script>
+        <script src="/v1/src/lib/angular-local-storage.js"></script>
+        <script src="/v1/src/lib/ngHammer.js"></script>
+
+        <script src="/v1/src/js/ng/app.js"></script>
+        <script src="/v1/src/js/ng/app-controller.js"></script>
+        <script src="/v1/src/js/ng/file-loader-controller.js"></script>
+        <script src="/v1/src/js/ng/directives.js"></script>
+        <script src="/v1/src/js/ng/filters.js"></script>
+        <script src="/v1/src/js/ng/viewer-factory.js"></script>
+        <script src="/v1/src/js/ng/storage-service.js"></script>
+        <script src="/v1/src/js/ng/message-bus.js"></script>
+
+        <script src="/v1/src/js/three/scene.js"></script>
+        <script src="/v1/src/js/three/setup.js"></script>
+        <script src="/v1/src/js/three/util.js"></script>
+        <script src="/v1/src/js/three/camera.js"></script>
+        <script src="/v1/src/js/three/wrangler.js"></script>
+
+        <script src="/v1/src/lib/three/DDSLoader.js"></script>
+        <script src="/v1/src/lib/three/MTLLoader.js"></script>
+        <script src="/v1/src/lib/three/OBJMTLLoader.js"></script>
+        <script src="/v1/src/lib/three/OBJLoader.js"></script>
+        <script src="/v1/src/lib/three/glTF-parser.js"></script>
+        <script src="/v1/src/lib/three/glTFLoader.js"></script>
+        <script src="/v1/src/lib/three/glTFLoaderUtils.js"></script>
+        <script src="/v1/src/lib/three/glTFAnimation.js"></script>
+
+    </head>
+    <body ng-view></body>
+</html>

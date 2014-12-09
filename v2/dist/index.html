@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="ThreeViewerApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <base href="/v2/dist/" />
+    <link rel="stylesheet" href="css/demo.css">
+    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+
+    <script src="/v2/src/js/config.js"></script>
+
+    <script src="/v2/src/lib/base.js"></script>
+    <script src="/v2/src/lib/deps.js"></script>
+    <script src="/v2/src/lib/jquery-2.1.1.js"></script>
+    <script src="/v2/src/lib/three.69.js"></script>
+    <script src="/v2/src/lib/OrbitControls.js"></script>
+    <script src="/v2/src/lib/hammer.js"></script>
+    <script src="/v2/src/lib/jquery.hammer.js"></script>
+    <script src="/v2/src/lib/angular.js"></script>
+    <script src="/v2/src/lib/angular-route.js"></script>
+    <script src="/v2/src/lib/angular-local-storage.js"></script>
+    <script src="/v2/src/lib/ngHammer.js"></script>
+    <script src="/v2/src/lib/three/DDSLoader.js"></script>
+    <script src="/v2/src/lib/three/MTLLoader.js"></script>
+    <script src="/v2/src/lib/three/OBJMTLLoader.js"></script>
+    <script src="/v2/src/lib/three/OBJLoader.js"></script>
+    <script src="/v2/src/lib/three/glTF-parser.js"></script>
+    <script src="/v2/src/lib/three/glTFLoader.js"></script>
+    <script src="/v2/src/lib/three/glTFLoaderUtils.js"></script>
+    <script src="/v2/src/lib/three/glTFAnimation.js"></script>
+
+    <script>
+        var Viewer = {
+            'Scene': null
+        };
+        var ThreeViewer = {};
+    </script>
+    <script src="app.min.js"></script>
+
+</head>
+
+<body ng-view></body>
+</html>

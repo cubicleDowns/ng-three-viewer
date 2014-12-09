@@ -1,0 +1,45 @@
+<div class="sidebar">
+    <button ng-click="toggleToolbar()">TB</button>
+    <button ng-click="toggleLoader()">FL</button>
+    <button ng-click="showAbout()">?</button>
+</div>
+<div class="toolbar" ng-show="tb.visible" stop-event>
+    <h2>Toolbar</h2><a href="#" class="close" ng-click="hideToolbar()"></a>
+    <div>
+        <label>Scale:  <span>{{data.scale | forceFloat}}</span><br />
+            <input class="inputControls" type="range" min=0.1 max=10 step=0.1 ng-model="data.scale" ng-change="scale()"/>
+        </label>
+    </div>
+    <div>
+        <label>Rotate X: <span>{{data.rotateX | forceInt}}</span><br />
+            <input class="inputControls" type="range" min=0 max=359 step=1 ng-model="data.rotateX" ng-change="rotate('x')"/>
+        </label>
+    </div>
+    <div>
+        <label>Rotate Y: <span>{{data.rotateY | forceInt}}</span><br />
+            <input class="inputControls" type="range" min=0 max=359 step=1 ng-model="data.rotateY" ng-change="rotate('y')"/>
+        </label>
+    </div>
+    <div>
+        <label>Rotate Z: <span>{{data.rotateZ | forceInt}}</span><br />
+            <input class="inputControls" type="range" min=0 max=359 step=1 ng-model="data.rotateZ" ng-change="rotate('z')"/>
+        </label>
+    </div>
+    <div>
+        <label>Translate X: <span>{{data.positionX | forceFloat}}</span><br />
+            <input class="inputControls" type="range" min=-1000 max=1000 step=0.1 ng-model="data.positionX" ng-change="translate()"/>
+        </label>
+    </div>
+    <div>
+        <label>Translate Y: <span>{{data.positionY | forceFloat}}</span><br />
+            <input class="inputControls" type="range" min=-1000 max=1000 step=0.1 ng-model="data.positionY" ng-change="translate()"/>
+        </label>
+    </div>
+    <div>
+        <label>Translate Z: <span>{{data.positionZ | forceFloat}}</span><br />
+            <input class="inputControls" type="range" min=-1000 max=1000 step=0.1 ng-model="data.positionZ" ng-change="translate()"/>
+        </label>
+    </div>
+
+</div>
+

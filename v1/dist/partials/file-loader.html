@@ -1,0 +1,56 @@
+<div id="file-loader" ng-controller="FileLoaderController"  ng-cloak>
+    <div id="loader-buttons">
+        <div class="load-button" ng-click="showTab('recent');">RECENT</div>
+        <div class="load-button" ng-click="showTab('loadJS');">JSON</div>
+        <div class="load-button" ng-click="showTab('loadOBJ');">OBJ/MTL</div>
+        <div class="load-button" ng-click="showTab('loadGLTF');">glTF</div>
+        <a href="#" class="close2" ng-click="hideLoader()"></a>
+    </div>
+    <div class="loader-options">
+        <div id="recent" class="loader-options"
+             ng-show="state.recent">
+                <label>
+                    <a href="#" target="_blank">RECENTLY VIEWED FILES</a>
+                    <select id="history" size=7
+                        ng-init="data.selectedModel = data.recent[0]"
+                        ng-model="data.selectedModel"
+                        ng-options="item.name group by item.type for item in data.recent"></select><br/><br/>
+                </label>
+                <button ng-click="loadSelectedFile()">LOAD FILE</button>
+                <button ng-click="clearRecent()">CLEAR</button>
+        </div>
+        <div id="obj-loader" class="loader-options"
+             ng-show="state.loadOBJ" ng-cloak>
+            <label>
+                <a href="http://en.wikipedia.org/wiki/Wavefront_.obj_file" target="_blank">OBJ - MTL Loader</a>
+                <input type="text" ng-model="data.obj" placeholder="obj file url">
+                <input type="text" ng-model="data.mtl" placeholder="mtl file url">
+                <input type="text" ng-model="data.name" placeholder="unique name">
+                <button ng-click="loadOBJMTL()">Load OBJ/MTL</button>
+                <button ng-click="loadOBJ()">LOAD OBJ</button>
+                <button ng-click="loadSampleOBJ()">SAMPLE OBJ</button>
+                <button ng-click="loadSampleOBJMTL()">SAMPLE OBJ-MTL</button>
+            </label>
+        </div>
+        <div id="gltf-loader" class="loader-options"
+             ng-show="state.loadGLTF" ng-cloak>
+            <label>
+                <a href="https://www.khronos.org/gltf" target="_blank">glTF Loader</a>
+                <input type="text" ng-model="data.url" placeholder="gltf json url">
+                <input type="text" ng-model="data.gltfname" placeholder="gltf file name">
+                <button ng-click="loadglTF()">LOAD glTF</button>
+                <button ng-click="loadSampleglTF()">SAMPLE glTF</button>
+            </label>
+        </div>
+        <div id="js-loader" class="loader-options"
+             ng-show="state.loadJS" ng-cloak>
+            <label>
+                <a href="https://github.com/mrdoob/three.js/wiki" target="_blank">JSON Loader</a>
+                <input type="text" ng-model="data.jsurl" placeholder="JSON url">
+                <input type="text" ng-model="data.jsname" placeholder="file name">
+                <button ng-click="loadJSON()">LOAD JSON</button>
+                <button ng-click="loadSampleJSON()">SAMPLE JSON</button>
+            </label>
+        </div>
+    </div>
+</div>
