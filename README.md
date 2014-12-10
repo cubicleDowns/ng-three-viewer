@@ -2,7 +2,7 @@ ng-three-viewer
 ===============
 
 ## Overview
-This project demonstrates two approaches (v1 & v2) to create an AngularJS and Three.js app.  You can view the accompany presentation on [Google Slides](http://goo.gl/R1BPLz).
+This project demonstrates two approaches (v1 & v2) to create an AngularJS and Three.js app.  You can view the accompanying presentation on [Google Slides](http://goo.gl/R1BPLz).
 
 Both approaches create the same app, a simple 3D model viewer.
 
