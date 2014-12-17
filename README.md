@@ -34,14 +34,13 @@ Both approaches create the same app, a simple 3D model viewer.
   * grunt serve
   * python -m SimpleHTTPServer
   * or whatever.
-
-### v1
-* Uncompiled: [localhost:8000/v1/](http://localhost:8000/v1/)
-* Compiled: [localhost:8000/v1/dist/](http://localhost:8000/v1/dist/)
-
-### v2
-* Uncompiled: [localhost:8000/v2/](http://localhost:8000/v2/)
-* Compiled: [localhost:8000/v2/dist/](http://localhost:8000/v2/dist/)
+4. Browse to SERVER_NAME:PORT
+  * Compiled Versions:
+    * /v1/dist/
+    * /v2/dist/
+  * Uncompiled Versions:
+    * /v1/
+    * /v2/
 
 ### v1 Compiling Code
 1.  From v1/ `grunt build`
@@ -50,6 +49,9 @@ Both approaches create the same app, a simple 3D model viewer.
   + Exports the files to /v1/dist/
 
 ### v2 Compiling Code
-1.  From v2/ `grunt`
-2.  Will show any warnings or errors from compilation
-3.  If no errors, it'll output /v2/dist/app.min.js
+1.  Uncomment 
+  * //goog.require('Viewer.Scene'); in app.js
+  * //goog.require's in scene.js
+2.  From v2/ `grunt`
+3.  Will show any warnings or errors from compilation
+4.  If no errors, it'll output /v2/dist/app.min.js
