@@ -7,7 +7,7 @@ goog.require('ThreeViewer.Filters');
 goog.require('ThreeViewer.MessageBus');
 goog.require('ThreeViewer.StorageService');
 goog.require('ThreeViewer.Config');
-goog.require('Viewer.Scene');
+//goog.require('Viewer.Scene');
 
 angular.module('ThreeViewerApp', ['ngHammer', 'ngRoute', 'LocalStorageModule'])
     .config(ThreeViewer.ConfigLocation)

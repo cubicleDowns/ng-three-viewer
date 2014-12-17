@@ -1,8 +1,8 @@
 goog.provide('Viewer.Scene');
-goog.require('Viewer.Util');
-goog.require('Viewer.Wrangler');
-goog.require('Viewer.Setup');
-goog.require('Viewer.Cameras');
+//goog.require('Viewer.Util');
+//goog.require('Viewer.Wrangler');
+//goog.require('Viewer.Setup');
+//goog.require('Viewer.Cameras');
 
 Viewer.Scene = function (params) {
 
