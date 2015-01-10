@@ -55,3 +55,31 @@ Both approaches create the same app, a simple 3D model viewer.
 2.  From v2/ `grunt`
 3.  Will show any warnings or errors from compilation
 4.  If no errors, it'll output /v2/dist/app.min.js
+
+### A few Protractor tests for v2 of the app ###
+
+#### Set up: ####
+1) Get Protractor:
+```sh
+npm install -g protractor
+```
+2) Get Selenium:
+```sh
+webdriver-manager update
+```
+3) Start Selenium server:
+```sh
+webdriver-manager start
+```
+4) Start the app on localhost:8000. I used ```python -m SimpleHTTPServer```.
+5) Run it! cd into test/ directory and run
+```sh
+protractor conf.js
+```
+That should launch Chrome and run the tests in it.
+
+#### Files: 
+* app.js -- page object containing some element locators and functions.
+* test.js -- the tests.
+* conf.js -- config file where, well, different options can be specified. 
+
