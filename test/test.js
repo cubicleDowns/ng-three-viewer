@@ -12,7 +12,7 @@ describe('v2 app', function() {
     element(by.buttonText('CLEAR')).click();
 
     // Asserts that history is clear
-    expect(element(by.css('#history > optgroup:nth-of-type(1) > option')).isPresent()).toBeFalsy();
+    expect(app.recentlyViewed.firstEntry.isPresent()).toBeFalsy();
 
   });
 
@@ -24,9 +24,7 @@ describe('v2 app', function() {
     app.refreshBrowser();
 
     // Grab second option from "Recently viewed files", make sure it was as we expect
-    var secondHistoryEntry = element(by.css('#history > optgroup:nth-of-type(2) > option'));
-
-    expect(secondHistoryEntry.getText()).toEqual('Textured_Lady');
+    expect(app.recentlyViewed.secondEntry.getText()).toEqual('Textured_Lady');
   });
 
   it('should be able to load sample object and add an entry to "Recently viewed"', function() {
@@ -36,9 +34,7 @@ describe('v2 app', function() {
 
     app.refreshBrowser();
 
-    var thirdHistoryEntry = element(by.css('#history > optgroup:nth-of-type(3) > option'));
-
-    expect(thirdHistoryEntry.getText()).toEqual('No texture guy');
+    expect(app.recentlyViewed.thirdEntry.getText()).toEqual('No texture guy');
   });
 
   it('should be able to load sample glTF and add an entry to "Recently viewed', function() {
@@ -48,9 +44,7 @@ describe('v2 app', function() {
 
     app.refreshBrowser();
 
-    var fourthHistoryEntry = element(by.css('#history > optgroup:nth-of-type(4) > option'));
-
-    expect(fourthHistoryEntry.getText()).toEqual('glTF Duck');
+    expect(app.recentlyViewed.fourthEntry.getText()).toEqual('glTF Duck');
   });
 
   it('should display correct error messages if required information is missing on JSON Loader', function() {

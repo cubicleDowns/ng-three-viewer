@@ -14,6 +14,14 @@ var V2App = function() {
   // glTF
   this.glTFBtn = element(by.css('.load-button:nth-child(4)'));
 
+  // Recently Viewed Files 
+  this.recentlyViewed = {
+    'firstEntry' : element(by.css('#history > optgroup:nth-of-type(1) > option')),
+    'secondEntry': element(by.css('#history > optgroup:nth-of-type(2) > option')),
+    'thirdEntry' : element(by.css('#history > optgroup:nth-of-type(3) > option')),
+    'fourthEntry': element(by.css('#history > optgroup:nth-of-type(4) > option'))
+  } 
+
   // Simply navigates to V2 URL
   this.getApp = function() {
     browser.get('http://localhost:8000/v2/#/');
@@ -23,6 +31,7 @@ var V2App = function() {
     browser.refresh();
   }
 
+  // Verifies that correct error message is shown to the user on alert dialogues
   this.verifyCorrectAlertMessageIsDisplayed = function(message) {
     var alertDialog = browser.switchTo().alert();
     expect(alertDialog.getText()).toEqual(message);
